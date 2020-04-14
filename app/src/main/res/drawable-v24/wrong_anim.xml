@@ -1,0 +1,6 @@
+<animation-list android:id="@+id/selected"
+    android:oneshot="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/wrong_time" android:duration="400" />
+    <item android:drawable="@drawable/perfect_time" android:duration="100" />
+</animation-list>

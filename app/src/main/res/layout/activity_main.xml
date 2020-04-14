@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/ring">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/TapToStart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/tap"
+            android:textColor="#87CEEB"
+            android:textSize="@dimen/text_size"
+            android:background="@android:color/transparent">
+        </Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sound"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:text="@string/mute"
+                    android:background="@drawable/button_shape"
+                    android:layout_marginEnd="@dimen/button_margin">
+                </Button>
+
+                <Button
+                    android:id="@+id/how_to_play"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:layout_marginEnd="@dimen/button_margin"
+                    android:text="@string/help"
+                    android:background="@drawable/button_shape">
+                </Button>
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/padding"
+                    android:text="@string/score"
+                    android:background="@drawable/textview_shape">
+                </TextView>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/upper_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ProgressBar
+                    android:id="@+id/progress_horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/progressbar_topMargin"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:max="100"
+                    android:progress="100"/>
+
+                <ImageView
+                    android:id="@+id/gloves"
+                    android:layout_width="@dimen/gloves_dimen"
+                    android:layout_height="@dimen/gloves_dimen"
+                    android:contentDescription="@string/desc"
+                    android:layout_marginTop="@dimen/gloves_margin"
+                    android:layout_gravity="center|end"/>
+
+                <ImageView
+                    android:id="@+id/correctIndicator"
+                    android:layout_width="@dimen/gloves_correct_frameWidth"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/desc"
+                    android:layout_gravity="center"
+                    android:src="@drawable/perfect_time"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="5"
+                android:baselineAligned="false">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/idle_pos"
+                        android:contentDescription="@string/desc"
+                        android:layout_marginEnd="@dimen/avatar_margin"
+                        android:layout_marginRight="@dimen/avatar_margin"
+                        android:layout_marginTop="@dimen/avatar_margin"/>
+
+                    <ImageView
+                        android:id="@+id/punchingBag"
+                        android:layout_width="@dimen/punching_bagWidth"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/bag"
+                        android:contentDescription="@string/desc"
+                        android:layout_marginLeft="@dimen/punching_bagMargin"
+                        android:layout_marginStart="@dimen/punching_bagMargin"
+                        android:layout_marginBottom="@dimen/punching_bagMargin"
+                        android:layout_gravity="end">
+                    </ImageView>
+
+                </FrameLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/img_center"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:alpha="0"
+                        android:src="@color/colorPrimary"
+                        android:contentDescription="@string/desc"
+                        android:layout_marginTop="@dimen/button_center_topMargin"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.45"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/buttonUp"
+                        android:layout_width="@dimen/punchButton_dimen"
+                        android:layout_height="@dimen/punchButton_dimen"
+                        android:contentDescription="@string/desc"
+                        android:text="@string/up"
+                        app:layout_constraintCircle="@+id/img_center"
+                        app:layout_constraintCircleAngle="0"
+                        app:layout_constraintCircleRadius="@dimen/punchButton_radius"
+                        android:background="@drawable/button_shape"
+                        tools:ignore="MissingConstraints" />
+
+                    <Button
+                        android:id="@+id/buttonLeft"
+                        android:layout_width="@dimen/punchButton_dimen"
+                        android:layout_height="@dimen/punchButton_dimen"
+                        android:contentDescription="@string/desc"
+                        android:text="@string/left"
+                        app:layout_constraintCircle="@+id/img_center"
+                        app:layout_constraintCircleAngle="120"
+                        app:layout_constraintCircleRadius="@dimen/punchButton_radius"
+                        android:background="@drawable/button_shape"
+                        tools:ignore="MissingConstraints" />
+
+                    <Button
+                        android:id="@+id/buttonRight"
+                        android:layout_width="@dimen/punchButton_dimen"
+                        android:layout_height="@dimen/punchButton_dimen"
+                        app:layout_constraintCircle="@+id/img_center"
+                        app:layout_constraintCircleAngle="240"
+                        app:layout_constraintCircleRadius="@dimen/punchButton_radius"
+                        android:contentDescription="@string/desc"
+                        android:text="@string/right"
+                        android:background="@drawable/button_shape"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

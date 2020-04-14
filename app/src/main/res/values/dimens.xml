@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size">40sp</dimen>
+    <dimen name="padding">5dp</dimen>
+    <dimen name="button_width">75dp</dimen>
+    <dimen name="button_margin">40dp</dimen>
+    <dimen name="progressbar_topMargin">30dp</dimen>
+    <dimen name="gloves_dimen">30dp</dimen>
+    <dimen name="gloves_margin">10dp</dimen>
+    <dimen name="gloves_correct_frameWidth">120dp</dimen>
+    <dimen name="avatar_margin">50dp</dimen>
+    <dimen name="punching_bagWidth">80dp</dimen>
+    <dimen name="punching_bagMargin">50dp</dimen>
+    <dimen name="button_center_topMargin">300dp</dimen>
+    <dimen name="punchButton_dimen">45dp</dimen>
+    <dimen name="punchButton_radius">35dp</dimen>
+
+
+</resources>

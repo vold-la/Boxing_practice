@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BoxingPractice</string>
+    <string name="desc">Image</string>
+    <string name="tap">Tap on screen to restart the game</string>
+    <string name="mute">Mute</string>
+    <string name="sound">Sound</string>
+    <string name="help">Help</string>
+    <string name="up">Up</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="hs">High Score : </string>
+    <string name="score">Score  :  </string>
+    <string name="how_to_play">Hit the correct button based on moving gloves.\n
+        Make sure to hit it when it is inside the frame to make combo punches.\n
+        \n
+        Your health will be decreasing slowly on every missed gloves and\n
+        will decrease drastically if you hit wrong punch or in wrong time.\n
+        Your health will increase on successful punch hit.\n
+        \n
+        Go ahead and boom the Sandbag .</string>
+
+    <string name="cancel">Yeah!! Got it</string>
+</resources>
